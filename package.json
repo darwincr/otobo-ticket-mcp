@@ -4,8 +4,12 @@
   "description": "MCP server for creating, searching, and managing OTOBO tickets via GenericInterface REST operations.",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "otobo-ticket-mcp": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "start": "node dist/index.js",
     "test": "vitest run",
     "test:watch": "vitest",
