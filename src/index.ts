@@ -16,12 +16,13 @@ const __dirname = path.dirname(__filename);
 const envPath = path.resolve(__dirname, '../.env');
 const configPath = path.resolve(__dirname, '../otobo_config.json');
 
-const result = dotenv.config({ path: envPath, override: true, quiet: true });
-
-if (result.error) {
+if (fs.existsSync(envPath)) {
+  const result = dotenv.config({ path: envPath, override: false, quiet: true });
+  if (result.error) {
     console.error("Error loading .env file from:", envPath, result.error);
+  }
 } else {
-    console.error("Loaded .env file from:", envPath);
+  dotenv.config({ override: false, quiet: true });
 }
 
 const OTOBO_URL = process.env.OTOBO_URL;

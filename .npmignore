@@ -1,0 +1,8 @@
+.env
+.env.*
+.vscode/
+coverage/
+tests/
+test_customer_api.ts
+otobo-modules/
+src/
