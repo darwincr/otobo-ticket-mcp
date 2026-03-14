@@ -13,6 +13,21 @@
         "OTOBO_USER": "${input:otobo_user}"
       },
       "type": "stdio"
+    },
+    "otobo_github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:darwincr/otobo-ticket-mcp#master"
+      ],
+      "env": {
+        "OTOBO_DEFAULT_QUEUE": "Raw",
+        "OTOBO_DEFAULT_TYPE": "Request",
+        "OTOBO_PASSWORD": "${input:otobo_password}",
+        "OTOBO_URL": "${input:otobo_url}",
+        "OTOBO_USER": "${input:otobo_user}"
+      },
+      "type": "stdio"
     }
   },
   "inputs": [
