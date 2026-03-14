@@ -1,0 +1,36 @@
+{
+  "servers": {
+    "otobo": {
+      "command": "node",
+      "args": [
+        "dist/index.js"
+      ],
+      "env": {
+        "OTOBO_DEFAULT_QUEUE": "Raw",
+        "OTOBO_DEFAULT_TYPE": "Request",
+        "OTOBO_PASSWORD": "${input:otobo_password}",
+        "OTOBO_URL": "${input:otobo_url}",
+        "OTOBO_USER": "${input:otobo_user}"
+      },
+      "type": "stdio"
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "otobo_url",
+      "description": "OTOBO GenericInterface REST URL"
+    },
+    {
+      "type": "promptString",
+      "id": "otobo_user",
+      "description": "OTOBO API user"
+    },
+    {
+      "type": "promptString",
+      "id": "otobo_password",
+      "description": "OTOBO API password",
+      "password": true
+    }
+  ]
+}

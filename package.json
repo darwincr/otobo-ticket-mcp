@@ -1,0 +1,38 @@
+{
+  "name": "otobo-ticket-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for creating, searching, and managing OTOBO tickets via GenericInterface REST operations.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run tests/helpers.test.ts",
+    "test:integration": "vitest run tests/integration.test.ts",
+    "test:coverage": "vitest run --coverage",
+    "test:legacy": "npx tsx tests/test_otobo_tools.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "otobo",
+    "helpdesk",
+    "tickets"
+  ],
+  "author": "Darwin Ranzone",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "@vitest/coverage-v8": "^4.0.16",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}

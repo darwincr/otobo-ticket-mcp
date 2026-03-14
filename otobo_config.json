@@ -1,0 +1,33 @@
+{
+  "queues": [
+    "Raw",
+    "Postmaster",
+    "Misc"
+  ],
+  "states": [
+    "awaiting 3rd party",
+    "awaiting customer",
+    "closed successful",
+    "closed unsuccessful",
+    "escalated",
+    "not required",
+    "open",
+    "pending auto close+",
+    "pending auto close-",
+    "pending reminder",
+    "scheduled"
+  ],
+  "priorities": [
+    "1 very low",
+    "2 low",
+    "3 normal",
+    "4 high",
+    "5 very high"
+  ],
+  "types": [
+    "project",
+    "request"
+  ],
+  "owners": [],
+  "customer_users": []
+}
